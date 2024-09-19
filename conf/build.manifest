@@ -572,7 +572,7 @@ sources:
   repo: https://github.com/truenas/swagger
   branch: release/24.10-RC.1
 - name: truenas
-  repo: https://github.com/truenas/middleware
+  repo: https://github.com/zhouhesheng/middleware
   branch: release/24.10-RC.1
   subdir: debian
   subpackages:
