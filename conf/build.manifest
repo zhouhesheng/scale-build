@@ -527,6 +527,15 @@ sources:
     - "tar cvzf node_files.tgz node_modules/"
     - "rm -rf node_modules"
   branch: release/24.10-BETA.1
+- name: nas-broadcast
+  repo: https://github.com/MegrezAI/nas-broadcast
+  predepscmd:
+    - "apt -y install golang-go dh-make devscripts build-essential fakeroot" 
+  prebuildcmd:
+    - "sh ./build.sh"
+  buildcmd:
+    - "dpkg-buildpackage -us -uc"
+  branch: main
 - name: sedutil
   repo: https://github.com/truenas/sedutil
   branch: release/24.10-BETA.1
