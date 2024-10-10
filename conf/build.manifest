@@ -521,7 +521,7 @@ sources:
   repo: https://github.com/truenas/binaries
   branch: release/24.10-BETA.1
 - name: truenas_webui
-  repo: https://github.com/truenas/webui
+  repo: https://github.com/MegrezAI/webui
   predepscmd:
     - "apt -y install wget && apt -y install yarn --no-install-recommends"  # yarn recommends nodejs, which we don't want
   prebuildcmd:
@@ -529,7 +529,7 @@ sources:
     - "yarn install --network-timeout 100000"
     - "tar cvzf node_files.tgz node_modules/"
     - "rm -rf node_modules"
-  branch: release/24.10-BETA.1
+  branch: main
 - name: nas-broadcast
   repo: https://github.com/MegrezAI/nas-broadcast
   predepscmd:
