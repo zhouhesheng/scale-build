@@ -28,6 +28,10 @@ apt-repos:
     distribution: bookworm
     component: stable
     key: keys/docker.gpg
+  - url: https://pkgs.tailscale.com/stable/debian
+    distribution: bookworm
+    component: main
+    key: keys/tailscale.gpg
 
 #
 # Packages which are installed into the base TrueNAS SCALE System by default
@@ -301,6 +305,9 @@ additional-packages:
   comment: requested by community (NAS-130356)
   install_recommends: false
 - name: nas-broadcast
+  comment: used by ocean nas
+  install_recommends: true
+- name: tailscale
   comment: used by ocean nas
   install_recommends: true
 
